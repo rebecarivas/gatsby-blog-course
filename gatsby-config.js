@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Tech Blog `,
+    position: `Desenvolvedora Front End`,
     description: `Blog sobre tecnologia e outras coisas`,
     author: `Rebeca Rivas`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
