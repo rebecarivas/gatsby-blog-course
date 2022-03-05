@@ -50,6 +50,8 @@ module.exports = {
             },
           },
           `gatsby-remark-lazy-load`,
+          //gatsby-remark-prismjs tem que ser o ultimo
+          `gatsby-remark-prismjs`,
         ],
       },
     },
