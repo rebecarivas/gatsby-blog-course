@@ -20,7 +20,7 @@ const PostItem = ({
   title,
   description,
 }) => (
-  <PostItemLink to="/slug/">
+  <PostItemLink to={slug}>
     <PostItemWrapper>
       <PostItemTag background={background}>{category}</PostItemTag>
       <PostItemInfo>
