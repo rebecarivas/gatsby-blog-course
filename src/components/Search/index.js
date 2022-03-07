@@ -1,6 +1,7 @@
 import React from "react"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, SearchBox, Hits, Stats } from "react-instantsearch-dom"
+import Hit from "../Search/Hit"
 import { SearchWrapper } from "./style"
 
 const Search = ({ algolia }) => {
@@ -9,7 +10,7 @@ const Search = ({ algolia }) => {
   return (
     <SearchWrapper>
       <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-        <SearchBox autoFocus translations={{ placeholder: "Pesquisar..." }} />
+        <SearchBox translations={{ placeholder: "Pesquisar..." }} />
         <Stats
           translations={{
             stats(nbHits, timeSpentMs) {
@@ -17,7 +18,7 @@ const Search = ({ algolia }) => {
             },
           }}
         />
-        <Hits />
+        <Hits hitComponent={Hit} />
       </InstantSearch>
     </SearchWrapper>
   )
