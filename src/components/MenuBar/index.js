@@ -3,18 +3,24 @@ import { Home } from "@styled-icons/boxicons-solid/Home"
 import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2"
 import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { Lightbulb as Light } from "@styled-icons/foundation/Lightbulb"
+import { ThList as List } from "@styled-icons/typicons/ThList"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 
 import { MenuBarWrapper, MenuBarGroup, MenuBarLink, MenuBarItem } from "./style"
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
 
   const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__display)
+
     window.__onThemeChange = () => setTheme(window.__theme)
+    window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
 
   return (
@@ -41,8 +47,14 @@ const MenuBar = () => {
         >
           <Light />
         </MenuBarItem>
-        <MenuBarItem title="Mudar visualização">
-          <Grid />
+        <MenuBarItem
+          title="Mudar visualização"
+          onClick={() => {
+            window.__setPreferredDisplay(isListMode ? "grid" : "list")
+          }}
+          className="display"
+        >
+          {isListMode ? <Grid /> : <List />}
         </MenuBarItem>
         <MenuBarItem title="Ir para o Topo">
           <Arrow />
