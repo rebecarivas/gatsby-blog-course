@@ -1,3 +1,6 @@
+require("dotenv").config()
+const queries = require("./src/utils/algolia-queries")
+
 module.exports = {
   siteMetadata: {
     title: `Tech Blog `,
@@ -63,6 +66,22 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      // This plugin must be placed last in your list of plugins to ensure that it can query all the GraphQL data
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+        queries,
+        chunkSize: 10000,
+        enablePartialUpdates: true,
+        // concurrentQueries: false, // default: true
+        // skipIndexing: true, // default: false, useful for e.g. preview deploys or local development
+        // continueOnFailure: false, // default: false, don't fail the build if algolia indexing fails
+        // algoliasearchOptions: undefined, // default: { timeouts: { connect: 1, read: 30, write: 30 } }, pass any different options to the algoliasearch constructor
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
