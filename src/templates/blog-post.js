@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
+import Comments from "../components/Comments"
 import {
   PostHeader,
   PostDate,
@@ -30,6 +31,7 @@ const BlogPost = ({ data, pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </MainContent>
       <RecommendedPosts next={next} previous={previous} />
+      <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
   )
 }
