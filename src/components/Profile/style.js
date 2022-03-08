@@ -10,7 +10,7 @@ export const ProfileWrapper = styled.section`
   ${media.lessThan("large")`
     display: flex;
     text-align: center;
-    justify-content: space-around; 
+    margin-left: 4rem;
   `}
 `
 

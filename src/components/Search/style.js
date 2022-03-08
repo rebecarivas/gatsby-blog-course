@@ -10,6 +10,7 @@ export const SearchWrapper = styled.section`
 
   ${media.lessThan("large")`
       padding-top: 1rem;
+      margin-top: 1rem;
     `}
 
   .ais-InstantSearch__root {
