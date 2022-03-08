@@ -8,6 +8,7 @@ import {
   ProfileDescription,
 } from "./style"
 import Avatar from "../Avatar"
+import getThemeColor from "../../utils/getThemeColor"
 
 const Profile = () => {
   const {
@@ -28,7 +29,13 @@ const Profile = () => {
 
   return (
     <ProfileWrapper>
-      <ProfileLink>
+      <ProfileLink
+        to="/"
+        cover
+        direction="left"
+        bg={getThemeColor}
+        duration={0.6}
+      >
         <Avatar />
         <ProfileAuthor>
           <h1>{title}</h1>
