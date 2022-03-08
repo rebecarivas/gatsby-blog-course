@@ -1,4 +1,5 @@
 require("dotenv").config()
+
 const queries = require("./src/utils/algolia-queries")
 
 module.exports = {
@@ -69,7 +70,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       // This plugin must be placed last in your list of plugins to ensure that it can query all the GraphQL data
-      resolve: `gatsby-plugin-algolia`,
+      resolve: `gatsby-plugin-algolia-search`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
@@ -86,19 +87,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Rebeca Rivas`,
+        short_name: `Rebeca Rivas`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#16202c`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        // theme_color: `#16202c`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
