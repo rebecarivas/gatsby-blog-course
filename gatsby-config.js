@@ -7,7 +7,7 @@ module.exports = {
     position: `Desenvolvedora Front End`,
     description: `Blog sobre tecnologia e outras coisas`,
     author: `Rebeca Rivas`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://thirsty-tereshkova-44a9e1.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
