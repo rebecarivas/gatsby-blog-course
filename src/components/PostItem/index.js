@@ -25,7 +25,7 @@ const PostItem = ({
     to={slug}
     cover
     direction="right"
-    bg={getThemeColor}
+    bg={getThemeColor()}
     duration={0.6}
   >
     <PostItemWrapper>

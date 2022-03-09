@@ -10,7 +10,7 @@ const RecommendedPosts = ({ next, previous }) => (
         to={previous.fields.slug}
         cover
         direction="left"
-        bg={getThemeColor}
+        bg={getThemeColor()}
         className="previous"
       >
         {previous.frontmatter.title}
@@ -21,7 +21,7 @@ const RecommendedPosts = ({ next, previous }) => (
         to={next.fields.slug}
         cover
         direction="left"
-        bg={getThemeColor}
+        bg={getThemeColor()}
         className="next"
       >
         {next.frontmatter.title}

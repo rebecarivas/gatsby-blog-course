@@ -31,7 +31,7 @@ const MenuBar = () => {
           to="/"
           cover
           direction="right"
-          bg={getThemeColor}
+          bg={getThemeColor()}
           duration={0.6}
           title="Voltar para Home"
         >
@@ -43,7 +43,7 @@ const MenuBar = () => {
           to="/search/"
           cover
           direction="right"
-          bg={getThemeColor}
+          bg={getThemeColor()}
           duration={0.6}
           title="Pesquisar"
         >

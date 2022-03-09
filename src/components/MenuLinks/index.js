@@ -18,7 +18,7 @@ const MenuLinks = () => (
             to={link.url}
             cover
             direction="left"
-            bg={getThemeColor}
+            bg={getThemeColor()}
             duration={0.6}
             activeClassName="active"
           >

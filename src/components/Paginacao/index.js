@@ -18,7 +18,7 @@ const Pagination = ({
         to={prevPage}
         cover
         direction="left"
-        bg={getThemeColor}
+        bg={getThemeColor()}
         duration={0.6}
       >
         ← página anterior
@@ -32,7 +32,7 @@ const Pagination = ({
         to={nextPage}
         cover
         direction="right"
-        bg={getThemeColor}
+        bg={getThemeColor()}
         duration={0.6}
       >
         proxima página →

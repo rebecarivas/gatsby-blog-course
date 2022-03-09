@@ -33,7 +33,7 @@ const Profile = () => {
         to="/"
         cover
         direction="left"
-        bg={getThemeColor}
+        bg={getThemeColor()}
         duration={0.6}
       >
         <Avatar />
