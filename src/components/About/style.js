@@ -22,7 +22,7 @@ export const AboutTitle = styled.h1`
 `
 export const AboutContent = styled.p`
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: 1.5;
   text-align: justify;
   margin: auto;
   max-width: 70rem;
